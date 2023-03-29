@@ -15,9 +15,18 @@ public class HeapBinaryTree<P, V> implements IHeap<P, V> {
 	private TreeNode<P, V> _root;
 	private Comparator<P> _priorityComparator;
 	
-	public HeapBinaryTree(Comparator<P> priorityComparator) {
+	public HeapBinaryTree() {
+		this(new Comparator<Proceso>() {
+			@Override
+			public int compare(Proceso p1, Proceso p2) {
+				return Integer.compare(p1.getPrioridad(), p2.getPrioridad());
+			}
+		});
+	}
+	
+	public HeapBinaryTree(Comparator<Proceso> priorityComparator) {
 		_count = 0;
-		_priorityComparator = priorityComparator;
+		_priorityComparator = (Comparator<P>) priorityComparator;
 	}
 	
 	@Override
