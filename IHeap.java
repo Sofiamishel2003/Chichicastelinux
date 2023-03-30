@@ -1,23 +1,15 @@
-/**
- * 
- */
+public interface IHeap<E extends Comparable<E>>
+{
+	
+	public E getPrioridad();
 
-/**
- * @author moises.alonso
- *
- */
-public interface IHeap<P, V> {
+	public E remove();
 
-	void Insert(P priority, V value);
+	public void Insert(E value);
 	
-	V get();
-
-	P getPrioridad();
+	public boolean isEmpty();
 	
-	V remove();
+	public int size();
 	
-	int count();
-	
-	boolean isEmpty();
-	
+	public void clear();
 }

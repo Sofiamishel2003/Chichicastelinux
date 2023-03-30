@@ -30,18 +30,21 @@ public class Chichicastelinux {
                         procesos.add(p);
                     }
                     
-                    HeapBinaryTree<Proceso, Integer> heap = new HeapBinaryTree<Proceso, Integer>();
+                    HeapBinaryTree<Proceso> heap = new HeapBinaryTree<Proceso>();
 
 
                     for (Proceso proceso : procesos) {
-                        heap.Insert(proceso, proceso.getPrioridad());
+                        heap.Insert(proceso);
+                        Proceso pri=heap.getPrioridad();
+                    //    System.out.println(pri.getProceso()+ "-"+heap.remove());
+                    //    System.out.println(pri.getProceso()+", "+pri.getNombre()+", "+pri.getNice()+", PR = "+heap.remove());
                     }
 
                     while (!heap.isEmpty()) {
                         Proceso pri=heap.getPrioridad();
-                        System.out.println(pri.getProceso()+", "+pri.getNombre()+", "+pri.getNice()+", PR = "+heap.remove());
-                        
-                    }
+                        System.out.println(pri.getProceso()+", "+pri.getNombre()+", "+pri.getNice()+", PR = "+pri.getPrioridad());
+                        heap.remove();
+                    }   
                     break;
                 case 2:
                     System.out.println("Saliendo del programa");

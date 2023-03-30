@@ -1,4 +1,6 @@
 vi,juan02,0
 ls,maria30,-20
 firefox,rosa20,5
-cat,juan02,5
+cat,juanpa0,10
+dog,angela,19
+pig,pinkcy12,-10
