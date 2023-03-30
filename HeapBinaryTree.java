@@ -117,14 +117,4 @@ public class HeapBinaryTree<E extends Comparable<E>> implements IHeap<E>
 	public void clear() {
 		
 	}
-
-	public void printElements() {
-		for (E element : data) {
-			System.out.print(element + " ");
-			System.out.println("\n");
-		}
-		System.out.println();
-	}
-	
-	
 }

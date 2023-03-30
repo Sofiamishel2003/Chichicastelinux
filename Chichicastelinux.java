@@ -35,9 +35,6 @@ public class Chichicastelinux {
 
                     for (Proceso proceso : procesos) {
                         heap.Insert(proceso);
-                        Proceso pri=heap.getPrioridad();
-                    //    System.out.println(pri.getProceso()+ "-"+heap.remove());
-                    //    System.out.println(pri.getProceso()+", "+pri.getNombre()+", "+pri.getNice()+", PR = "+heap.remove());
                     }
 
                     while (!heap.isEmpty()) {
