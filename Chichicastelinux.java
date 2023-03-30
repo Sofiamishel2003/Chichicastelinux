@@ -15,13 +15,7 @@ public class Chichicastelinux {
             switch (e)
             {
                 case 1:
-                /* 
-                    Archivos file =new Archivos();
-                    ArrayList<String> lineas= file.read_file("procesos.txt");
-                    for (int i = 0; i <= lineas.size()-1; i++) 
-                    {   
-                        System.out.println(lineas.get(i)); //hace el proceso linea por linea
-                    }*/
+                
                     Archivos archivos = new Archivos();
                     ArrayList<String> lineas = archivos.read_file("procesos.txt");
                     ArrayList<Proceso> procesos = new ArrayList<>();
@@ -44,7 +38,9 @@ public class Chichicastelinux {
                     }
 
                     while (!heap.isEmpty()) {
-                        System.out.println(heap.remove());
+                        Proceso pri=heap.getPrioridad();
+                        System.out.println(pri.getProceso()+", "+pri.getNombre()+", "+pri.getNice()+", PR = "+heap.remove());
+                        
                     }
                     break;
                 case 2:

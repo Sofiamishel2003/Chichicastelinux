@@ -14,6 +14,16 @@ public class TreeNode<P, V> {
 	TreeNode<P, V> _left;
 	TreeNode<P, V> _right;
 	
+	public void removeChild(TreeNode<P, V> child) {
+		if (this._left == child) {
+			this._left = null;
+			child._parent = null;
+		} else if (this._right == child) {
+			this._right = null;
+			child._parent = null;
+		}
+	}
+
 	public TreeNode(P priority, V value) {
 		set_priority(priority);
 		set_value(value);
